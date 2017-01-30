@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<h2>Contacts</h2>
+<div ng-app="clientapp" class="container">
+    <br />
+    <br />
+    @*<input type="text" placeholder="Search Student" ng-model="searchStudent" />*@
+    <br />
+    <div ng-controller="ContactsController">
+        <table class="table">
+            <tr ng-repeat="r in contacts ">
+                @*| filter : searchStudent*@
+                <td>{{r.Title}} {{r.FirstName}} {{r.LastName}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
